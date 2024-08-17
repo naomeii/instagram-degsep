@@ -1,3 +1,6 @@
 .venv
 .env
-utils/
+
+chromedriver.exe
+loginInfo.txt
+__pycache__/
