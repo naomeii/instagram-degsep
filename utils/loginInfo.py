@@ -1,5 +1,4 @@
 import os
-import time
 
 def saveLogin(username, password):
     with open('loginInfo.txt', 'w') as file:
@@ -20,8 +19,15 @@ def loadSavedLogin():
 
 def loginInfo():
     print('Welcome to viewing Degrees of Separation between users on Instagram.')
-    time.sleep(1)
     print('Note that you will need to be logged in for the program to work.')
+
+    saved = loadSavedLogin()
+    if saved:
+        reuse = input(f"Use saved login for '{saved[0]}'? (yes/no): ").strip().lower()
+        if reuse == 'yes':
+            print("Logging you in...")
+            return saved
+
     username = input("Please enter your username: ")
     password = input("Please enter your password: ")
     print("Logging you in...")

@@ -3,4 +3,5 @@
 
 chromedriver.exe
 loginInfo.txt
+session.json
 __pycache__/
